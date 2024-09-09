@@ -1,0 +1,18 @@
+Task Overview
+
+In this lab task, you will extend the Number Guessing Game by implementing it using 
+different search algorithms. You are required to implement the following versions:
+
+1. Non-AI Version: Player vs Computer (already provided).
+
+2. AI Version with Binary Search: Computer vs Player (as already provided).
+
+3. BFS Version: Implement the Number Guessing Game where the AI uses 
+Breadth-First Search (BFS) to guess the number.
+
+4. DFS Version: Implement the Number Guessing Game where the AI uses Depth First Search (DFS) to guess the number.
+
+5. Your Own Algorithm: Implement the Number Guessing Game using an 
+algorithm of your choice. You can choose from algorithms like Simulated 
+Annealing, Genetic Algorithm, or any other search strategy. Explain your choice 
+in the code comments
