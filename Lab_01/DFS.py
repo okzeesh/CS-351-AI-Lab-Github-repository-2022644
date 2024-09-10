@@ -1,9 +1,11 @@
 import random
 
+print("Think of number between 1 and 100, and I (the AI) will try to guess it.")
+
 def guess_number_dfs(min_val, max_val, tries=0):
     # AI makes a guess within the provided range
     current_guess = random.randint(min_val, max_val)
-    print("Think of number between 1 and 100, and I (the AI) will try to guess it.")
+    
 
     print(f"AI's guess is: {current_guess}")
 
