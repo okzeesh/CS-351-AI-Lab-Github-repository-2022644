@@ -66,18 +66,23 @@ class ConservationScheduler:
         for activity in self.schedule:
             print(activity)
 
+def get_user_input():
+    activities = []
+    print("Welcome to the Wildlife Conservation Scheduler!")
+    while True:
+        name = input("Enter the activity name (or type 'done' to finish): ")
+        if name.lower() == 'done':
+            break
+        duration = int(input("Enter the duration in hours: "))
+        resources = input("Enter required resources (comma-separated): ").split(", ")
+        activities.append(Activity(name, duration, resources))
+    return activities
 
-# Define activities with their durations and required resources
-activities = [
-    Activity("Feeding the Lions", duration=1, resources=["Staff", "Vehicle"]),
-    Activity("Health Check for Elephants", duration=2, resources=["Veterinary Staff"]),
-    Activity("Rehabilitation for Birds", duration=3, resources=["Volunteers", "Equipment"]),
-    Activity("Maintenance of Habitats", duration=2, resources=["Staff", "Tools"]),
-    Activity("Education Workshop", duration=1, resources=["Presentation Materials"]),
-]
+# Get user input for activities
+user_activities = get_user_input()
 
 # Create a conservation scheduler
-conservation_scheduler = ConservationScheduler(activities)
+conservation_scheduler = ConservationScheduler(user_activities)
 
 # Schedule activities
 conservation_scheduler.schedule_all_activities()
